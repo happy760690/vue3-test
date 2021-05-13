@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
+// const Recommend = () => import('@/views/recommend'/* webpackChunkName: "recommend" */)
 
 const routes = [
   {
@@ -7,6 +8,10 @@ const routes = [
     name: 'Home',
     component: Home
   },
+  // {
+  //   path: '/',
+  //   redirect: '/recommend'
+  // },
   {
     path: '/about',
     name: 'About',
