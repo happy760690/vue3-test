@@ -62,7 +62,7 @@ import {
 } from "vuex";
 import apiObj from "@/api/common";
 export default {
-    name: "pageHeader",
+    name: "headerBar",
     data() {
         return {
             userListObj: null,

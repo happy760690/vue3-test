@@ -42,14 +42,14 @@
 
 <script>
 // import {Cookie} from '../assets/js/utils/utils'
-import apiObj from "@/api/common";
+import apiObj from "@/service/common";
 export default {
     name: "login",
     data() {
         return {
             loginForm: {
                 name: '25',
-                pass: 'Julive@666'
+                pass: 'Julive@888'
             },
             loginRules: {
                 name: [

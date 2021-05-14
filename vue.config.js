@@ -16,5 +16,6 @@ module.exports = {
         before(app){
             registerRouter(app)
         }
-    }
+    },
+    productionSourceMap: false,
 }

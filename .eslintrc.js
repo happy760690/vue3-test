@@ -12,7 +12,19 @@ module.exports = {
   },
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'indent': 0,
+    'semi': [0], // 分号
+    'space-before-function-paren': 0,
+    'quotes': 0,
+    'comma-dangle': 0, // 逗号
+    'no-multiple-empty-lines': 0, // 多行
+    'object-curly-spacing': 0,
+    'eol-last': 0, // 尾空行
+    'prefer-const': 0, // 只用一次的变量用const
+    'no-unused-vars': 0, // 没有用到的声明
+    'no-trailing-spaces': 0, // 行尾空格
+    'no-tabs': 0, 
   },
   overrides: [
     {

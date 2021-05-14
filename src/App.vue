@@ -1,30 +1,15 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
+    <!--顶部栏-->
+    <!-- <header-bar /> -->
+    <!-- 顶部栏下方主要内容，包括侧边栏和主内容区域 -->
+    <main-container />
   <router-view/>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 </style>

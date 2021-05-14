@@ -1,12 +1,27 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home.vue'
+import Home from '@/views/Home.vue'
+
+// 登录
+const Login = () => import("@/views/Login.vue");
 // const Recommend = () => import('@/views/recommend'/* webpackChunkName: "recommend" */)
 
 const routes = [
+  // {
+  //   path: '/',
+  //   name: 'Home',
+  //   component: Home
+  // },
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+      path: '/',
+      redirect: '/login'
+  },
+  {
+      path: "/login",
+      name: "login",
+      component: Login,
+      meta: {
+          tit: "登录",
+      },
   },
   // {
   //   path: '/',
