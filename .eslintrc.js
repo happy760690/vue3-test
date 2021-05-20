@@ -24,7 +24,11 @@ module.exports = {
     'prefer-const': 0, // 只用一次的变量用const
     'no-unused-vars': 0, // 没有用到的声明
     'no-trailing-spaces': 0, // 行尾空格
-    'no-tabs': 0, 
+    'no-tabs': 0,
+    'eqeqeq': 0,
+    'vue/no-unused-components': 0,
+    'vue/no-deprecated-v-on-native-modifier': 0,
+    'vue/no-deprecated-slot-attribute': 0
   },
   overrides: [
     {

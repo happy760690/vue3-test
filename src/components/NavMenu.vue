@@ -42,7 +42,7 @@ import SubMenuItem from './SubMenuItem';
 import {
     mapState
 } from 'vuex';
-import commonApi from '../api/common';
+import commonApi from '../service/common';
 export default {
     name: 'backend-menu',
     data() {

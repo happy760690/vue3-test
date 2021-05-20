@@ -27,7 +27,7 @@
                     </ul>
                 </i>
                 <span class="jl-username">{{
-                        this.username.employeeName
+                        username.employeeName
                     }}</span>
                 <span class="jl-userroles-wrap" v-if="roleList.length > 1">
                     <el-menu
@@ -35,8 +35,8 @@
                         mode="horizontal"
                         @select="changeRole">
                         <el-submenu index="1">
-                            <template slot="title">{{
-                                    this.username.roleName
+                            <template>{{
+                                    username.roleName
                                 }}</template>
                             <el-menu-item
                                 v-for="(elm, index) in roleList"
@@ -60,7 +60,7 @@
 import {
     mapState
 } from "vuex";
-import apiObj from "@/api/common";
+import apiObj from "@/service/common";
 export default {
     name: "headerBar",
     data() {
@@ -308,7 +308,7 @@ export default {
     padding-top: 5px;
 }
 
-.jl-userroles-wrap>>>.el-menu--horizontal>.el-submenu .el-submenu__title {
+.jl-userroles-wrap /deep/ .el-menu--horizontal>.el-submenu .el-submenu__title {
     height: 50px;
     line-height: 50px;
 }

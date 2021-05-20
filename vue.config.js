@@ -13,9 +13,14 @@ module.exports = {
         }
     },
     devServer: {
-        before(app){
+      clientLogLevel: 'debug',
+
+      before(app) {
             registerRouter(app)
         }
+    },
+    configureWebpack: {
+      devtool: 'source-map'
     },
     productionSourceMap: false,
 }

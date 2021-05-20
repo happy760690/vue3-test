@@ -37,7 +37,7 @@ export function get(url, params) {
   }).then((res) => {
     const serverData = res.data
     if (serverData.code === ERR_OK) {
-      return serverData.result
+      return serverData
     }
   }).catch((e) => {
     console.log(e)
@@ -49,7 +49,7 @@ export function post(url, params) {
     }).then((res) => {
       const serverData = res.data
       if (serverData.code === ERR_OK) {
-        return serverData.result
+        return serverData
       }
     }).catch((e) => {
       console.log(e)
