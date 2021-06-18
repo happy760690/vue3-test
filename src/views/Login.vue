@@ -42,7 +42,7 @@
 
 <script>
 // import {Cookie} from '../assets/js/utils/utils'
-import apiObj from "@/service/common";
+import apiObj from "@/api/common";
 export default {
     name: "login",
     data() {

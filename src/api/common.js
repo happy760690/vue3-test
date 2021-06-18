@@ -1,31 +1,31 @@
-import { get, post } from './base'
+import {get, post } from './base'
 //  import {
 //     axios
 // } from '@/assets/js/axios';
 
 // 开发环境登陆接口,仅作开发时登录使用
-const loginDevApi = '/api/dsp-user/login';
+const loginDevApi = "/api/cms-user/login";
 
 // 菜单接口
-const getMenuApi = '/api/dsp-common/menu';
+const getMenuApi = "/api/cms-common/menu";
 
 // 获取员工的基本信息接口
-const getUserInfoApi = '/api/dsp-user/user-header-info';
+const getUserInfoApi = "/api/cms-user/user-header-info";
 
 // 退出登录接口
-const logoutApi = '/api/dsp-user/logout';
+const logoutApi = "/api/cms-user/logout";
 
-// 退出登录接口
-const getRoleListAPi = '/api/dsp-user/get-role-list';
+// 获取头部信息
+const getHeadInfoAPi = "/api/cms-user/user-header-info";
 
 // 切换员工角色列表
-const changeRoleListApi = '/api/dsp-user/switch-role';
+const changeRoleListApi = "/api/cms-user/switch-role";
 
 // 获取oss签名接口
-const getOssAuthApi = '/api/dsp-common/get-oss-auth';
+const getOssAuthApi = "/api/cms-common/get-oss-auth";
 
 // 获取oss临时token接口
-const getTempToken = '/api/dsp-common/get-temp-token';
+const getTempToken = "/api/cms-common/get-temp-token";
 
 /**
  * 测试环境登录
@@ -33,7 +33,7 @@ const getTempToken = '/api/dsp-common/get-temp-token';
  * @param {String} options.password 密码
  * @return {Promise}
  */
-const loginDev = (options) => post(loginDevApi, options);
+const loginDev = options => post(loginDevApi, options);
 
 /**
  * 获取导航菜单数据
@@ -51,13 +51,13 @@ const getUserInfo = () => get(getUserInfoApi);
  * 获取员工角色列表
  * @return {Promise}
  */
-const getRoleListData = () => get(getRoleListAPi);
+const getHeadInfoData = () => get(getHeadInfoAPi);
 
 /**
  * 切换员工角色列表
  * @return {Promise}
  */
-const changeRoleListData = (params) => get(changeRoleListApi, {params});
+const changeRoleListData = params => get(changeRoleListApi, { params });
 
 /**
  * 退出登录
@@ -66,21 +66,21 @@ const changeRoleListData = (params) => get(changeRoleListApi, {params});
 const logout = () => get(logoutApi);
 
 /**
- * @param {String} params.path 
+ * @param {String} params.path
  */
-const getOssAuth = (params) => get(getOssAuthApi, {params});
+const getOssAuth = params => get(getOssAuthApi, { params });
 
 /**
  * @description:  获取oss临时token 支持分片上传
  */
-const getOssSign = (params) => get(getTempToken, {params});
+const getOssSign = params => get(getTempToken, { params });
 
 export default {
     loginDev,
     getMenu,
     getUserInfo,
     logout,
-    getRoleListData,
+    getHeadInfoData,
     changeRoleListData,
     getOssAuth,
     getOssSign

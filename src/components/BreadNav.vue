@@ -1,36 +1,33 @@
 <!--
- * @Author: xie bin
- * @Date: 2020-07-29 09:54:39
- * @LastEditTime: 2021-05-08 10:53:42
- * @LastEditors: Please set LastEditors
+ * @Name: 面包屑组件
  * @Description: 面包屑组件
- * @FilePath: /webapp_huijian/src/components/BreadNav.vue
---> 
+ * @Author: xueshuai
+ * @Date: 2021-05-10 10:28:24
+ * @Editors: xueshuai
+-->
+
 <template>
-<div class="bread-box">
-    <!--面包屑导航-->
-    <el-breadcrumb
-        separator-class="el-icon-arrow-right"
-        class="bread-nav">
-        <el-breadcrumb-item :to="{ path: '/home/home' }">
-            <!-- <a href="/">首页</a> -->
-            首页
-        </el-breadcrumb-item>
-        <template v-for="(item, index) in breadArrList">
-            <el-breadcrumb-item
-                v-if="item.toPath"
-                :key="index"
-                :to="{ path: item.toPath }">
-                {{ item.breadText }}
+    <div class="bread-box">
+        <!--面包屑导航-->
+        <el-breadcrumb separator-class="el-icon-arrow-right" class="bread-nav">
+            <el-breadcrumb-item>
+                <a href="/">首页</a>
+                <!-- 首页 -->
             </el-breadcrumb-item>
-            <el-breadcrumb-item
-                v-else
-                :key="index">
-                {{ item.breadText }}
-            </el-breadcrumb-item>
-        </template>
-    </el-breadcrumb>
-</div>
+            <template v-for="(item, index) in breadArrList">
+                <el-breadcrumb-item
+                    v-if="item.toPath"
+                    :key="index"
+                    :to="{ path: item.toPath }"
+                >
+                    {{ item.breadText }}
+                </el-breadcrumb-item>
+                <el-breadcrumb-item v-else :key="item.toPath">
+                    {{ item.breadText }}
+                </el-breadcrumb-item>
+            </template>
+        </el-breadcrumb>
+    </div>
 </template>
 
 <script>
@@ -48,5 +45,10 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
+.bread-box {
+    margin-top: 5px;
+    background: #fff;
+    padding: 10px 20px;
+}
 </style>

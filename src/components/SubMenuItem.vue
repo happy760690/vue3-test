@@ -100,11 +100,11 @@ export default {
 }
 </style>
 <style scoped>
-.sub-menu-box>>>.el-submenu .el-submenu__title .el-submenu__icon-arrow {
+.sub-menu-box:deep().el-submenu .el-submenu__title .el-submenu__icon-arrow {
     right: 0;
 }
 
-.sub-menu-box>>>.el-submenu .el-submenu__title {
+.sub-menu-box:deep().el-submenu .el-submenu__title {
     padding: 0 16px 0 10px;
 }
 </style>
